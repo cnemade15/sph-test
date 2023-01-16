@@ -1,0 +1,7 @@
+name: Products QRcode
+type: module
+description: 'Adds Custom "Products" content type and QRCode for Products'
+core_version_requirement: ^8.8.0 || ^9.0
+package: Custom
+dependencies:
+  - block

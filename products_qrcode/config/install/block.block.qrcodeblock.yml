@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - products_qrcode
+  theme:
+    - mp_theme
+id: qrcodeblock
+theme: mp_theme
+region: sidebar_second
+weight: 0
+provider: null
+plugin: prod_qrcode_block
+settings:
+  id: prod_qrcode_block
+  label: 'QRcode Block'
+  provider: products_qrcode
+  label_display: '0'
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      products: products
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

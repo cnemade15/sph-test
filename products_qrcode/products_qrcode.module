@@ -1,0 +1,21 @@
+<?php
+/**
+ * @file
+ * Contains products_qrcode.module.
+ */
+ 
+function products_qrcode_install() {
+
+  //Creates a sample content
+  $node = \Drupal::entityTypeManager()->getStorage('node')->create(array(
+  	'type'        => 'products',
+  	'title'       => 'Unicorn',
+  	'body' => [
+  		'value' => t('unicorn, mythological animal resembling a horse or a goat with a single horn on its forehead. The unicorn appeared in early Mesopotamian artworks, and it also was referred to in the ancient myths of India and China.'),
+  		'format' => 'basic_html',
+  	],
+  ));
+  $node->field_purchase_link = ["uri" => "https://google.com", "title" => "some link title", "options" => ["target" => "_blank"]];
+  $node->field_image->generateSampleItems();
+  $node->save();
+}

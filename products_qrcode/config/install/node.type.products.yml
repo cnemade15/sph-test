@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - products_qrcode
+name: Products
+type: products
+description: 'Content Type to add Products'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false
